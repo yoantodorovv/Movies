@@ -1,0 +1,25 @@
+@model List<GenreCatalogDto>
+
+@{
+    Layout = "_Layout";
+
+    Console.WriteLine(Model);
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Genre Catalog</title>
+</head>
+<body>
+    <div>
+        <ul>
+            @foreach(var genre in Model)
+            {
+                <li>@genre.GenreName - @genre.Priority</li>
+            }
+        </ul>
+    </div>
+</body>
+</html>
